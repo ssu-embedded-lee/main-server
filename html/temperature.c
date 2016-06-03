@@ -47,7 +47,7 @@ int readData(void)
     /* 체크섬 검사 측정 값 출력 */
     if((j >= 40) && (dhtVal[4] == ((dhtVal[0] + dhtVal[1] + dhtVal[2] + dhtVal[3]) & 0xFF))) {
         farenheit = dhtVal[2]*9./5.+32;
-        printf("%d.%d *C ", dhtVal[2], dhtVal[3]);
+        printf("%d.%d", dhtVal[2], dhtVal[3]);
     } else{ return 2; }
         return 1;
 }

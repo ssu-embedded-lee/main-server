@@ -1,6 +1,6 @@
 <?php
 $data = shell_exec("sudo /var/www/html/temperature");
-echo $data;
+echo $_GET['callback'].'('.json_encode($data).')';
 ?>
 
 
